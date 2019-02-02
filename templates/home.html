@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" >
+    <label for='username'>Username:
+        <input type='text' name='username' value={{username}} >
+        <span class='error'>{{username_blank_error}}
+        <span class='error'>{{username_length_error}}
+        <span class='error'>{{username_space_error}}</span></p>
+    </label>
+        
+    <label for='email'>Email address <em>(optional)</em>:
+        <input type='text' name='email' value={{email}} >
+        <span class='error'>{{email_invalid_error}}</span></p>
+    </label>
+
+    
+    <label for='pwd'>Password:
+        <input type='password' name='pwd' />
+        <span class='error'>{{pwd_blank_error}}</span>
+        <span class='error'>{{pwd_requirement_error}}</span></p>
+    </label>
+    <label for='confirm_pwd'>Confirm Password:
+        <input type='password' name='confirm_pwd' />
+        <span class='error'>{{confirm_pwd_blank_error}}</span>
+        <span class='error'>{{confirm_error}}</span>
+        </p>    
+    </label>
+
+    <input type='submit' />
+</form>
+<span
+{% endblock %}
